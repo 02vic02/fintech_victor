@@ -1,0 +1,250 @@
+*{
+	padding: 0; /* Reseta o padding padrão de todos os elementos para 0 */
+	margin: 0; /* Reseta a margem padrão de todos os elementos para 0 */
+	box-sizing: 0; /* Define a caixa de modelo para calcular o tamanho dos elementos */
+	font-family: 'poppins', sans-serif; /* Define a família de fontes para todos os elementos */
+}
+
+.topbar{
+	position: fixed; /* Define a posição como fixa para que o elemento permaneça fixo na tela */
+	background: #fff; /* Define a cor de fundo */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08); /* Adiciona sombra ao elemento */
+	width: 100%; /* Define a largura como 100% */
+	height: 60px; /* Define a altura */
+	padding: 0 20px; /* Adiciona preenchimento interno */
+	display: grid; /* Define o layout como grid */
+	grid-template-columns: 2fr 10fr 0.4fr 1fr; /* Define as colunas do grid */
+	align-items: center; /* Alinha os itens verticalmente */
+	z-index: 1; /* Define a ordem de empilhamento do elemento */
+}
+
+.logo h2{
+	color: #299b63; /* Define a cor do texto */
+}
+
+.search{
+	position: relative; /* Define a posição como relativa para que os elementos internos possam ser posicionados relativamente */
+	width: 60%; /* Define a largura */
+	justify-self: center; /* Alinha o elemento no centro horizontalmente */
+}
+
+.search input{
+	width: 100%; /* Define a largura do input como 100% */
+	height: 40px; /* Define a altura */
+	padding: 0 40px; /* Adiciona preenchimento interno */
+	font-size: 16px; /* Define o tamanho da fonte */
+	outline: none; /* Remove o contorno do input */
+	border: none; /* Remove a borda */
+	border-radius: 10px; /* Adiciona bordas arredondadas */
+	background: #f5f5f5; /* Define a cor de fundo */
+}
+
+.search i{
+	position: absolute; /* Define a posição como absoluta */
+	right: 15px; /* Define a distância da direita */
+	top: 15px; /* Define a distância do topo */
+	cursor: pointer; /* Define o cursor do mouse como ponteiro */
+}
+
+.user{
+	position: relative; /* Define a posição como relativa */
+	width: 50px; /* Define a largura */
+	height: 50px; /* Define a altura */
+}
+
+.user img{
+	position: absolute; /* Define a posição como absoluta */
+	top: 0; /* Alinha o topo ao pai */
+	left: 0; /* Alinha a esquerda ao pai */
+	height: 100%; /* Define a altura como 100% */
+	width: 100%; /* Define a largura como 100% */
+	object-fit: cover; /* Define como a imagem deve ser redimensionada para preencher o contêiner */
+}
+
+/* sidebar começa aqui */
+
+.sidebar{
+	position: fixed; /* Define a posição como fixa */
+	top: 60px; /* Define a distância do topo */
+	width: 260px; /* Define a largura */
+	height: calc(100% - 60px); /* Calcula a altura subtraindo 60px da altura total */
+	background: #299b63; /* Define a cor de fundo */
+	overflow-x: hidden; /* Esconde o overflow horizontal */
+}
+
+.sidebar ul{
+	margin-top: 20px; /* Define a margem superior */
+} 
+
+.sidebar ul li{
+	width: 100%; /* Define a largura como 100% */
+	list-style: none; /* Remove a estilização padrão das listas */
+}
+
+.sidebar ul li:hover{
+	background: #fff;
+}
+
+.sidebar ul li:hover a{
+	color: #299b63;	
+}
+
+.sidebar ul li a{
+	width: 100%; /* Define a largura como 100% */
+	text-decoration: none; /* Remove a decoração de texto */
+	color: #fff; /* Define a cor do texto */
+	height: 60px; /* Define a altura */
+	display: flex; /* Define como flexível */
+	align-items: center; /* Alinha os itens verticalmente */
+}
+
+.sidebar ul li a i{
+	min-width: 60px; /* Define a largura mínima */
+	font-size: 24px; /* Define o tamanho da fonte */
+	text-align: center; /* Alinha o texto ao centro */
+} 
+
+/*main section começa aqui */
+
+.main{
+	position: absolute; /* Define a posição como absoluta */
+	top: 60px; /* Define a distância do topo */
+	width: calc(100% - 260px); /* Calcula a largura subtraindo 260px da largura total */
+	left: 260px; /* Define a distância da esquerda */
+	min-height: calc(100vh - 60px); /* Calcula a altura mínima subtraindo 60px da altura da janela */
+	background: #f5f5f5; /* Define a cor de fundo */
+}
+
+.cards{
+	width: 95%; /* Define a largura */
+	padding: 35px 20px; /* Define o preenchimento */
+	display: grid; /* Define como grid */
+	grid-template-columns: repeat(4, 1fr); /* Define as colunas do grid */
+	grid-gap: 20px; /* Define o espaçamento entre as células do grid */
+}
+
+.cards .card{
+	padding: 20px; /* Define o preenchimento */
+	display: flex; /* Define como flexível */
+	align-items: center; /* Alinha os itens verticalmente */
+	justify-content: space-between; /* Distribui o espaço entre os itens */
+	background: #fff; /* Define a cor de fundo */
+	border-radius: 10px; /* Define o raio do canto */
+	box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08); /* Define a sombra */
+}
+
+.cards .card:hover{
+	background: #299b63;
+}
+
+.cards .card:hover .number{
+	color: #fff;
+}
+
+.cards .card:hover .card-name{
+	color: #fff;
+}
+
+.cards .card:hover .icon-box i{
+	color: #fff;
+}
+
+.number{
+	font-size: 35px; /* Define o tamanho da fonte */
+	font-weight: 500; /* Define o peso da fonte */
+	color: #299b63; /* Define a cor do texto */
+}
+
+.card-name{
+	color: #888; /* Define a cor do texto */
+	font-weight: 600; /* Define o peso da fonte */
+}
+
+.icon-box i{
+	font-size:45px; /* Define o tamanho da fonte */
+	color: #299b63; /* Define a cor do texto */
+}
+
+/*charts começa aqui*/
+
+.charts{
+	display: grid; /* Define como grid */
+	grid-template-columns: 2fr 1fr; /* Define as colunas do grid */
+	/* 	grid-gap: 20px; /* Define o espaçamento entre as células do grid */
+	width: 100%; /* Define a largura como 100% */
+	padding: 20px; /* Define o preenchimento */
+	padding-top: 0; /* Define o preenchimento superior como 0 */
+}
+
+.chart{
+	background: #fff; /* Define a cor de fundo */
+	padding: 10x; /* Define o preenchimento */
+	border-radius: 10px; /* Define o raio do canto */
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); /* Define a sombra */
+	width: 90%; /* Define a largura */
+}
+
+.chart h2{
+	margin-bottom: 5px;
+	font-size: 20px;
+	color: #666;
+	text-align: center;
+}
+
+/*responsive começa aqui*/
+
+@media (max-width:1115px){
+	.sidebar{
+		width: 60px;
+	}
+	.main{
+		left: 60px;
+		width: calc(100% - 60px);
+	}
+}
+
+@media (max-width:880px){
+	.cards{
+	grid-template-columns: repeat(2, 1fr); /* Define as colunas do grid */
+	}
+	.charts{
+	grid-template-columns: 1fr;
+	}
+
+	#doughnut-chart{
+		padding: 50px;
+	}
+	#doughnut{
+		padding: 50px;
+	}
+}
+@media (max-width:880px){
+	.topbar{
+		grid-template-columns: 1fr 5fr 0.4fr 1fr;
+	}
+	.cards{
+		grid-template-columns: 1fr;
+	}
+	.loogo h2{
+		font-size: 20px;
+	}
+	.search{
+		width: 80%;
+	}
+	.search input{
+		padding: 0 9px;
+	}
+	.fa-bell{
+		margin-right: 5px;
+	}
+	.user{
+		width: 40px;
+		height: 40px;
+	}
+	#doughnut-chart{
+		padding: 10px;
+	}
+	.doughnut{
+		 padding: 0;
+	}
+}
